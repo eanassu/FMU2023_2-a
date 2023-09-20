@@ -2,6 +2,7 @@ package com.example.exemplo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -30,4 +31,24 @@ public class MainActivity extends AppCompatActivity {
         editTextNumber3.setText(Integer.toString(soma));
 
     }
+
+    public void abrirJanela( View view ) {
+        int x, y, soma;
+        x = Integer.parseInt(editTextNumber.getText().toString());
+        y = Integer.parseInt(editTextNumber2.getText().toString());
+        soma = x + y;
+        Intent intent = new Intent(this, MainActivity2.class);
+        intent.putExtra("soma", soma);
+        startActivity(intent);
+    }
 }
+
+
+
+
+
+
+
+
+
+

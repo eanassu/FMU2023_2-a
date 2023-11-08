@@ -57,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity( intent );
 
     }
+
+    public void abrirHttp( View view ) {
+        Intent intent = new Intent( this, HttpActivity.class);
+        startActivity( intent );
+
+    }
+
 }
 
 
